@@ -7,7 +7,7 @@
 
     <context:property-placeholder location="classpath:application.properties"/>
 
-    <dubbo:application name="demo-consumer"/>
+    <dubbo:application name="${dubbo.name}"/>
     <dubbo:registry address="${dubbo.address}"/>
     <dubbo:reference id="demoService" interface="xyz.fz.dubbo.service.DemoService" retries="0"/>
 </beans>
