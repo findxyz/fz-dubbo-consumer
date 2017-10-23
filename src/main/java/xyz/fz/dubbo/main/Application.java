@@ -8,7 +8,7 @@ public class Application {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"application-consumer.xml"});
         context.start();
         DemoService demoService = (DemoService) context.getBean("demoService");
-        for (int i=0; i<999; i++) {
+        for (int i = 0; i < 999; i++) {
             String hello = demoService.sayHello("world");
             System.out.println(hello);
             Thread.sleep(1000L);
